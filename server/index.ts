@@ -16,6 +16,7 @@ const app = express();
 app.use((request, response, next) => {
     response.header("Access-Control-Allow-Origin", "*");
     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    response.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();});
 app.use(bodyParse.urlencoded({ extended: true }));
 app.use(bodyParse.json());
@@ -61,5 +62,4 @@ app.delete('/:id', (request, response) => {
     response.status(200).send();
 });
 
-console.log('listening http://localhost:9999/');
-app.listen(9999);
+app.listen(9999, () => console.log('listening on port 9999'));

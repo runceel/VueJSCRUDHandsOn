@@ -13,6 +13,7 @@ var app = express_1.default();
 app.use(function (request, response, next) {
     response.header("Access-Control-Allow-Origin", "*");
     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    response.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
 });
 app.use(body_parser_1.default.urlencoded({ extended: true }));
@@ -55,6 +56,5 @@ app.delete('/:id', function (request, response) {
     todos.splice(index, 1);
     response.status(200).send();
 });
-console.log('listening http://localhost:9999/');
-app.listen(9999);
+app.listen(9999, function () { return console.log('listening on port 9999'); });
 //# sourceMappingURL=index.js.map
