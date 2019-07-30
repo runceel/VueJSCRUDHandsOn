@@ -7,7 +7,7 @@ var express_1 = __importDefault(require("express"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var todos = [
     { id: 1, text: '買い物', done: false },
-    { id: 2, text: 'ゴミ捨て', done: false },
+    { id: 2, text: 'ゴミ捨て', done: true },
 ];
 var app = express_1.default();
 app.use(function (request, response, next) {

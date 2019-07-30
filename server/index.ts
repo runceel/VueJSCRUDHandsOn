@@ -8,8 +8,8 @@ declare interface TodoItem {
 }
 
 const todos = [
-    { id: 1, text: '買い物', done: false},
-    { id: 2, text: 'ゴミ捨て', done: false},
+    { id: 1, text: '買い物', done: false },
+    { id: 2, text: 'ゴミ捨て', done: true },
 ] as TodoItem[];
 
 const app = express();
