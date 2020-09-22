@@ -1,6 +1,7 @@
 # Vue.js TODO リスト ハンズオン
 
 このリポジトリーは、Vue.js で Web API の呼び出しを含む TODO リストアプリを作るハンズオンテキストです。
+Vue 3 の Composition API を使用するように最近アップデートしました。
 
 ## 事前準備
 
